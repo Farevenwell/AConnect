@@ -33,10 +33,10 @@ jobs:
       - name: Commit updated timestamp
         run: |
           # Random chance to skip (e.g., ~50%)
-          if [ $((RANDOM % 2)) -ne 0 ]; then
-            echo "Skipping this run randomly."
-            exit 0
-          fi
+          # if [ $((RANDOM % 2)) -ne 0 ]; then
+          #   echo "Skipping this run randomly."
+          #   exit 0
+          # fi
 
           git config --local user.email "farevenwell@gmail.com"
           git config --local user.name "Farevenwell"
