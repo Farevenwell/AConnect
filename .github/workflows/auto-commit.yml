@@ -49,10 +49,8 @@ jobs:
           messages=(
             "chore(bot): updated timestamp ⏰"
             "chore(bot): keeping things fresh 🔄"
-            "chore(bot): just another automated update 🤖"
             "chore(bot): keeping the heartbeat going 💓"
             "chore(bot): routine check-in 📅"
-            "chore(bot): another tick on the clock 🕒"
             "chore(bot): minor update, major vibes ✨"
             "chore(bot): automation doing its thing 🚀"
             "chore(bot): time update from the bot 🛠️"
@@ -60,7 +58,7 @@ jobs:
           )
 
           random_index=$((RANDOM % ${#messages[@]}))
-          git commit -m "${messages[$random_index]}" || echo "No changes to commit."
+          git commit -m "${messages[$random_index]}" || echo "There are no changes to commit."
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
